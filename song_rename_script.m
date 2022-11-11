@@ -22,7 +22,7 @@ for i = 1: 1: songListLimit;
     songTitle(oldSpaces) = '_';
         
     %Cycle through unacceptable string characters and delete them
-    %FIXME: Inefficient as fuck
+    %FIXME: Inefficient
     badSpaces = find(songTitle == '.');
     songTitle(badSpaces) = '';
     badSpaces = find(songTitle == '(');
