@@ -1,6 +1,6 @@
 %MUST MOVE TO DIRECTORY WITH SONGS!
 %make a struct of directory '*.mp3'
-songList = dir('*m4a');
+songList = dir('*mp3');
 songListDimensions = size(songList);
 songListLimit = songListDimensions(1);
 
@@ -22,7 +22,6 @@ for i = 1: 1: songListLimit;
     songTitle(oldSpaces) = '_';
         
     %Cycle through unacceptable string characters and delete them
-    %FIXME: Inefficient
     badSpaces = find(songTitle == '.');
     songTitle(badSpaces) = '';
     badSpaces = find(songTitle == '(');
